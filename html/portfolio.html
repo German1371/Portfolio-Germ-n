@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Portfolio profesional de German Cosano, desarrollador web junior especializado en HTML5, CSS3 moderno, JavaScript y diseño responsive accesible." />
+  <meta name="author" content="German Cosano" />
+  <meta name="theme-color" content="#2f6f9c" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0b1220" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="German Cosano · Desarrollador web" />
+  <meta property="og:description" content="Portfolio profesional de German Cosano. HTML5, CSS3 moderno, accesibilidad y diseño responsive." />
+  <meta property="og:locale" content="es_ES" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>German Cosano · Portfolio de desarrollador web</title>
+
+  <link rel="canonical" href="./portfolio.html" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6f9c'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='34' font-weight='700' fill='white'%3EG%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preload" as="image" href="../images/ImgenPortfolio.png" fetchpriority="high" />
+  <link rel="stylesheet" href="../css/normalize.css" />
+  <link rel="stylesheet" href="../css/portfolio.css" />
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.dataset.theme = t;
+      } catch (e) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "German Cosano",
+    "jobTitle": "Desarrollador web",
+    "email": "mailto:germaan2005@gmail.com",
+    "url": "./portfolio.html",
+    "address": { "@type": "PostalAddress", "addressLocality": "Córdoba", "addressCountry": "ES" },
+    "sameAs": [
+      "https://github.com/German1371",
+      "https://www.linkedin.com/in/germán-cosano-torres-b65127388"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <div class="barra-progreso" aria-hidden="true"></div>
+
+  <header class="cabecera" role="banner">
+    <div class="cabecera-contenido">
+      <nav class="navegacion" aria-label="Navegación principal">
+        <ul id="menu-principal" class="menu-principal">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li>
+            <button class="boton-tema" id="boton-tema" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro">
+              <span class="boton-tema-icono" aria-hidden="true">
+                <svg class="icono-sol" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg>
+                <svg class="icono-luna" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/></svg>
+              </span>
+              <span class="boton-tema-texto">Modo oscuro</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+
+    <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+      <div class="hero-contenido">
+        <p class="hero-etiqueta"><span class="hero-pulso" aria-hidden="true"></span>Disponible para proyectos</p>
+        <h1 id="hero-titulo">Hola, soy <span class="hero-resaltado">German</span></h1>
+        <p class="hero-subtitulo">Desarrollador web junior con ganas de aprender y crecer creando interfaces accesibles, rápidas y bonitas.</p>
+        <div class="hero-acciones">
+          <a class="boton boton-primario" href="#contacto">Contactar conmigo</a>
+          <a class="boton boton-secundario" href="#experiencia">Ver experiencia</a>
+        </div>
+        <dl class="hero-stats" aria-label="Datos rápidos">
+          <div><dt>Años aprendiendo</dt><dd>4+</dd></div>
+          <div><dt>Proyectos académicos</dt><dd>+20</dd></div>
+          <div><dt>Foco</dt><dd>Frontend</dd></div>
+        </dl>
+      </div>
+      <div class="hero-decor" aria-hidden="true">
+        <span class="hero-blob hero-blob-a"></span>
+        <span class="hero-blob hero-blob-b"></span>
+        <span class="hero-blob hero-blob-c"></span>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="seccion" aria-labelledby="titulo-sobre-mi">
+      <p class="etiqueta-seccion">Sobre mí</p>
+      <h2 id="titulo-sobre-mi">Desarrollador apasionado por la innovación y el aprendizaje continuo</h2>
+      <div class="sobre-mi-cuadricula">
+        <figure class="sobre-mi-foto">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="../images/ImgenPortfolio.png"
+              type="image/png" />
+            <source
+              media="(min-width: 600px)"
+              srcset="../images/ImgenPortfolio.png"
+              type="image/png" />
+            <img
+              src="../images/ImgenPortfolio.png"
+              srcset="../images/ImgenPortfolio.png 1x"
+              alt="Retrato profesional de German Cosano"
+              width="640" height="640"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high" />
+          </picture>
+          <figcaption class="sobre-mi-pie">German · Córdoba, ES</figcaption>
+        </figure>
+        <div class="sobre-mi-texto">
+          <p>Soy desarrollador web con cuatro años estudiando este sector. Disfruto traduciendo ideas en interfaces limpias, accesibles y rápidas, cuidando cada detalle del HTML semántico al último milisegundo de carga.</p>
+          <p>Me apasionan los estándares modernos de la web: HTML5, CSS3, container queries, scroll-driven animations, accesibilidad WAI-ARIA y rendimiento medido con Lighthouse.</p>
+          <ul class="sobre-mi-puntos">
+            <li><strong>Localización:</strong> Córdoba, España</li>
+            <li><strong>Formación:</strong> DAW · IES Gran Capitán</li>
+            <li><strong>Idiomas:</strong> Español (nativo), Inglés</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="seccion seccion-habilidades" aria-labelledby="titulo-habilidades">
+      <p class="etiqueta-seccion">Habilidades</p>
+      <h2 id="titulo-habilidades">Lo que traigo a cada proyecto</h2>
+      <p class="seccion-intro">Un equilibrio entre fundamentos sólidos y curiosidad por las últimas APIs de la plataforma web.</p>
+
+      <div class="habilidades-contenedor">
+        <ul class="habilidades-cuadricula" role="list">
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/code.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Frontend</h3>
+            <p>HTML semántico, CSS moderno (Grid, Flexbox, container queries) y JavaScript ES2023.</p>
+          </li>
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/devices.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Diseño responsive</h3>
+            <p>Mobile-first, breakpoints fluidos y <em>container queries</em> para componentes verdaderamente adaptables.</p>
+          </li>
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/design_services.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>UI y prototipado</h3>
+            <p>Maquetación basada en wireframes, mejoras visuales progresivas y sistemas de design tokens.</p>
+          </li>
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/accessibility_new.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Accesibilidad</h3>
+            <p>WAI-ARIA, contraste AA/AAA, navegación por teclado y respeto por <code>prefers-reduced-motion</code>.</p>
+          </li>
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/merge_type.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Git y trabajo en equipo</h3>
+            <p>Ramas, pull requests y revisiones de código para organizar avances y aprender en equipo.</p>
+          </li>
+          <li class="tarjeta-habilidad">
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/autorenew.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Aprendizaje continuo</h3>
+            <p>Iteración constante para mejorar código, diseño, rendimiento y experiencia de usuario.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experiencia" class="seccion" aria-labelledby="titulo-experiencia">
+      <p class="etiqueta-seccion">Experiencia</p>
+      <h2 id="titulo-experiencia">Proyectos y trayectoria</h2>
+
+      <ol class="experiencia-lista" role="list">
+        <li>
+          <article class="experiencia-elemento">
+            <header class="experiencia-cabecera">
+              <p class="experiencia-fecha"><time datetime="2026">2026</time> – Actualidad</p>
+              <h3>Prácticas y proyectos personales</h3>
+              <p class="experiencia-rol">DAW · Diseño de interfaces web</p>
+            </header>
+            <p>Desarrollo de ejercicios de maquetación, componentes reutilizables y páginas responsive con foco en accesibilidad y rendimiento.</p>
+            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
+              <li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>Grid</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="experiencia-elemento">
+            <header class="experiencia-cabecera">
+              <p class="experiencia-fecha"><time datetime="2024">2024</time> – <time datetime="2025">2025</time></p>
+              <h3>Proyecto web académico</h3>
+              <p class="experiencia-rol">Entorno educativo</p>
+            </header>
+            <p>Creación de una web multipágina con estructura semántica, estilos modulares y control de versiones colaborativo.</p>
+            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
+              <li>CSS Grid</li><li>Responsive</li><li>GitHub</li>
+            </ul>
+          </article>
+        </li>
+        <li>
+          <article class="experiencia-elemento">
+            <header class="experiencia-cabecera">
+              <p class="experiencia-fecha">Próximo objetivo</p>
+              <h3>Primer portfolio profesional 1.0</h3>
+              <p class="experiencia-rol">Versión pública</p>
+            </header>
+            <p>Añadir más proyectos reales, animaciones ligeras basadas en scroll y mejoras continuas en accesibilidad y SEO.</p>
+            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
+              <li>UI</li><li>UX</li><li>JavaScript</li><li>Lighthouse</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">
+      <p class="etiqueta-seccion">Contacto</p>
+      <h2 id="titulo-contacto">¿Hablamos?</h2>
+      <div class="contacto-contenido">
+        <aside class="contacto-info" aria-label="Datos de contacto">
+          <p>Estoy abierto a prácticas, colaboraciones académicas y a aprender en proyectos reales. Respondo en menos de 24 horas.</p>
+          <address class="contacto-enlaces">
+            <a class="contacto-enlace" href="mailto:germaan2005@gmail.com" rel="me">
+              <span class="contacto-icono" aria-hidden="true">✉</span> germaan2005@gmail.com
+            </a>
+            <a class="contacto-enlace" href="https://www.linkedin.com/in/germán-cosano-torres-b65127388" target="_blank" rel="noopener me">
+              <span class="contacto-icono" aria-hidden="true">in</span> LinkedIn
+            </a>
+            <a class="contacto-enlace" href="https://github.com/German1371" target="_blank" rel="noopener me">
+              <span class="contacto-icono" aria-hidden="true">gh</span> GitHub
+            </a>
+          </address>
+        </aside>
+
+        <form class="contacto-formulario" aria-label="Formulario de contacto" novalidate>
+          <div class="fila-formulario">
+            <div class="campo-formulario">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required minlength="2" />
+            </div>
+            <div class="campo-formulario">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="campo-formulario">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Proyecto / Colaboración" required />
+          </div>
+          <div class="campo-formulario">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto..." required minlength="10"></textarea>
+          </div>
+          <button class="boton boton-primario" type="submit">Enviar mensaje</button>
+          <p class="formulario-aviso" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina" role="contentinfo">
+    <div class="pie-contenido">
+      <p>&copy; <time datetime="2026">2026</time> German Cosano · Hecho con HTML5, CSS3 y mucho café.</p>
+      <p><span aria-hidden="true">📍</span> Córdoba, ES</p>
+      <a href="#inicio" class="pie-volver" aria-label="Volver arriba">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="../js/theme-toggle.js" defer></script>
+</body>
+</html>
