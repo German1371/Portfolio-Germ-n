@@ -22,6 +22,9 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6f9c'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' font-family='Segoe UI,Arial,sans-serif' font-size='34' font-weight='700' fill='white'%3EG%3C/text%3E%3C/svg%3E" />
 
   <link rel="preload" as="image" href="images/ImgenPortfolio.jpeg" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@700;800&display=swap" />
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/portfolio.css" />
 
@@ -67,7 +70,7 @@
         <ul id="menu-principal" class="menu-principal">
           <li><a href="#sobre-mi">Sobre mí</a></li>
           <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li>
             <button class="boton-tema" id="boton-tema" type="button" aria-pressed="false" aria-label="Cambiar a modo oscuro">
@@ -92,12 +95,12 @@
         <p class="hero-subtitulo">Desarrollador web junior con ganas de aprender y crecer creando interfaces accesibles, rápidas y bonitas.</p>
         <div class="hero-acciones">
           <a class="boton boton-primario" href="#contacto">Contactar conmigo</a>
-          <a class="boton boton-secundario" href="#experiencia">Ver experiencia</a>
+          <a class="boton boton-secundario" href="#proyectos">Ver proyectos</a>
         </div>
         <dl class="hero-stats" aria-label="Datos rápidos">
           <div><dt>Años aprendiendo</dt><dd>4+</dd></div>
           <div><dt>Proyectos académicos</dt><dd>+20</dd></div>
-          <div><dt>Foco</dt><dd>Frontend</dd></div>
+          <div><dt>Foco</dt><dd>Full stack</dd></div>
         </dl>
       </div>
       <div class="hero-decor" aria-hidden="true">
@@ -146,90 +149,132 @@
 
     <section id="habilidades" class="seccion seccion-habilidades" aria-labelledby="titulo-habilidades">
       <p class="etiqueta-seccion">Habilidades</p>
-      <h2 id="titulo-habilidades">Lo que traigo a cada proyecto</h2>
-      <p class="seccion-intro">Un equilibrio entre fundamentos sólidos y curiosidad por las últimas APIs de la plataforma web.</p>
+      <h2 id="titulo-habilidades">Del diseño de la base de datos al despliegue</h2>
+      <p class="seccion-intro">Dos años de DAW en el IES Gran Capitán me han llevado por toda la pila web: interfaces, APIs, bases de datos y puesta en producción. Esto es lo que he practicado y aplicado en proyectos reales.</p>
 
       <div class="habilidades-contenedor">
         <ul class="habilidades-cuadricula" role="list">
           <li class="tarjeta-habilidad">
             <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/code.svg" alt="" width="32" height="32" loading="lazy" />
             <h3>Frontend</h3>
-            <p>HTML semántico, CSS moderno (Grid, Flexbox, container queries) y JavaScript ES2023.</p>
+            <p>Maquetación semántica y accesible, CSS moderno con Grid, Flexbox y <em>container queries</em>, preprocesadores Sass y JavaScript del DOM a <code>fetch</code> contra APIs.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Tecnologías de frontend">
+              <li>HTML5</li><li>CSS3</li><li>Sass</li><li>JavaScript ES6+</li><li>TypeScript</li><li>Canvas</li>
+            </ul>
           </li>
           <li class="tarjeta-habilidad">
-            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/devices.svg" alt="" width="32" height="32" loading="lazy" />
-            <h3>Diseño responsive</h3>
-            <p>Mobile-first, breakpoints fluidos y <em>container queries</em> para componentes verdaderamente adaptables.</p>
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/widgets.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Frameworks y SPA</h3>
+            <p>Aplicaciones de una sola página con componentes, estado, hooks y enrutado. React es mi herramienta principal; también he trabajado con Angular y Next.js.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Frameworks">
+              <li>React 19</li><li>Vite</li><li>React Router</li><li>Angular</li><li>Next.js</li>
+            </ul>
           </li>
           <li class="tarjeta-habilidad">
-            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/design_services.svg" alt="" width="32" height="32" loading="lazy" />
-            <h3>UI y prototipado</h3>
-            <p>Maquetación basada en wireframes, mejoras visuales progresivas y sistemas de design tokens.</p>
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/dns.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Backend y APIs</h3>
+            <p>APIs REST con Node.js y Express, comunicación en tiempo real con WebSockets y aplicaciones PHP orientadas a objetos con patrón MVC y PDO.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Tecnologías de backend">
+              <li>Node.js</li><li>Express</li><li>Socket.IO</li><li>PHP</li><li>MVC</li><li>API REST</li>
+            </ul>
           </li>
           <li class="tarjeta-habilidad">
-            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/accessibility_new.svg" alt="" width="32" height="32" loading="lazy" />
-            <h3>Accesibilidad</h3>
-            <p>WAI-ARIA, contraste AA/AAA, navegación por teclado y respeto por <code>prefers-reduced-motion</code>.</p>
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/storage.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Bases de datos</h3>
+            <p>Modelado entidad-relación y normalización, consultas multitabla, procedimientos, funciones, cursores y triggers. También bases de datos NoSQL con MongoDB.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Bases de datos">
+              <li>SQL</li><li>MySQL</li><li>PostgreSQL</li><li>Supabase</li><li>MongoDB</li>
+            </ul>
           </li>
           <li class="tarjeta-habilidad">
-            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/merge_type.svg" alt="" width="32" height="32" loading="lazy" />
-            <h3>Git y trabajo en equipo</h3>
-            <p>Ramas, pull requests y revisiones de código para organizar avances y aprender en equipo.</p>
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/rocket_launch.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Git, calidad y despliegue</h3>
+            <p>Control de versiones con ramas y repositorios remotos, pruebas unitarias y despliegue continuo con GitHub Actions hacia servicios en la nube.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Herramientas y despliegue">
+              <li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>Vercel</li><li>Render</li><li>pytest</li>
+            </ul>
           </li>
           <li class="tarjeta-habilidad">
-            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/autorenew.svg" alt="" width="32" height="32" loading="lazy" />
-            <h3>Aprendizaje continuo</h3>
-            <p>Iteración constante para mejorar código, diseño, rendimiento y experiencia de usuario.</p>
+            <img class="tarjeta-icono" src="https://cdn.jsdelivr.net/npm/@material-design-icons/svg/outlined/account_tree.svg" alt="" width="32" height="32" loading="lazy" />
+            <h3>Gestión de proyectos</h3>
+            <p>Del análisis a la entrega: estudio de viabilidad, gestión de riesgos, presupuesto y planificación con metodologías ágiles, trabajando en equipo.</p>
+            <ul class="habilidad-chips" role="list" aria-label="Gestión de proyectos">
+              <li>Scrum / ágil</li><li>OpenProject</li><li>Trello</li><li>Python</li><li>XML</li>
+            </ul>
           </li>
         </ul>
       </div>
     </section>
 
-    <section id="experiencia" class="seccion" aria-labelledby="titulo-experiencia">
-      <p class="etiqueta-seccion">Experiencia</p>
-      <h2 id="titulo-experiencia">Proyectos y trayectoria</h2>
+    <section id="proyectos" class="seccion" aria-labelledby="titulo-proyectos">
+      <p class="etiqueta-seccion">Proyectos</p>
+      <h2 id="titulo-proyectos">Lo que he construido y lo que viene</h2>
+      <p class="seccion-intro">Proyectos completos, pensados para resolver problemas reales y llevados hasta producción.</p>
 
-      <ol class="experiencia-lista" role="list">
-        <li>
-          <article class="experiencia-elemento">
-            <header class="experiencia-cabecera">
-              <p class="experiencia-fecha"><time datetime="2026">2026</time> – Actualidad</p>
-              <h3>Prácticas y proyectos personales</h3>
-              <p class="experiencia-rol">DAW · Diseño de interfaces web</p>
-            </header>
-            <p>Desarrollo de ejercicios de maquetación, componentes reutilizables y páginas responsive con foco en accesibilidad y rendimiento.</p>
-            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
-              <li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>Grid</li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="experiencia-elemento">
-            <header class="experiencia-cabecera">
-              <p class="experiencia-fecha"><time datetime="2024">2024</time> – <time datetime="2025">2025</time></p>
-              <h3>Proyecto web académico</h3>
-              <p class="experiencia-rol">Entorno educativo</p>
-            </header>
-            <p>Creación de una web multipágina con estructura semántica, estilos modulares y control de versiones colaborativo.</p>
-            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
-              <li>CSS Grid</li><li>Responsive</li><li>GitHub</li>
-            </ul>
-          </article>
-        </li>
-        <li>
-          <article class="experiencia-elemento">
-            <header class="experiencia-cabecera">
-              <p class="experiencia-fecha">Próximo objetivo</p>
-              <h3>Primer portfolio profesional 1.0</h3>
-              <p class="experiencia-rol">Versión pública</p>
-            </header>
-            <p>Añadir más proyectos reales, animaciones ligeras basadas en scroll y mejoras continuas en accesibilidad y SEO.</p>
-            <ul class="experiencia-tecnologias" role="list" aria-label="Tecnologías utilizadas">
-              <li>UI</li><li>UX</li><li>JavaScript</li><li>Lighthouse</li>
-            </ul>
-          </article>
-        </li>
-      </ol>
+      <div class="proyectos-contenedor">
+        <ul class="proyectos-cuadricula" role="list">
+          <li>
+            <article class="tarjeta-proyecto" aria-labelledby="proyecto-roomly">
+              <div class="proyecto-media proyecto-media-roomly">
+                <figure class="proyecto-navegador">
+                  <span class="proyecto-navegador-barra" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="images/proyectos/roomly-login.png" alt="Pantalla de inicio de sesión de Roomly en escritorio" width="1280" height="800" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="proyecto-movil">
+                  <img src="images/proyectos/roomly-movil.png" alt="Roomly en la versión móvil" width="780" height="1688" loading="lazy" decoding="async" />
+                </figure>
+              </div>
+
+              <div class="proyecto-cuerpo">
+                <p class="proyecto-estado proyecto-estado-online"><span aria-hidden="true"></span>En producción · Proyecto integrado 2º DAW</p>
+                <h3 id="proyecto-roomly">Roomly · Gestor de pisos compartidos</h3>
+                <p>Aplicación full-stack que reúne en un solo sitio todo lo que se gestiona en un piso compartido: gastos, tareas de limpieza, búsqueda de piso o compañeros y el chat de la casa.</p>
+                <ul class="proyecto-puntos" role="list">
+                  <li>Reparto automático de gastos y deudas entre compañeros</li>
+                  <li>Chat en tiempo real con WebSockets</li>
+                  <li>Cuadrantes de limpieza con rotación automática</li>
+                  <li>Anuncios con filtros, favoritos y solicitudes para unirse</li>
+                  <li>Autenticación con email y Google, y correos transaccionales</li>
+                </ul>
+                <ul class="habilidad-chips" role="list" aria-label="Tecnologías de Roomly">
+                  <li>React 19</li><li>Node.js</li><li>Express</li><li>Socket.IO</li><li>Supabase</li><li>PostgreSQL</li><li>Vercel</li><li>Render</li>
+                </ul>
+                <div class="proyecto-acciones">
+                  <a class="boton boton-proyecto" href="https://roomly-blond.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                  <a class="boton boton-proyecto-sec" href="https://github.com/iesgrancapitan-proyectos/202526-junio-GestorPisosCompartidos-Roomly" target="_blank" rel="noopener">Código en GitHub</a>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article class="tarjeta-proyecto" aria-labelledby="proyecto-lounge">
+              <div class="proyecto-media proyecto-media-lounge">
+                <figure class="proyecto-navegador">
+                  <span class="proyecto-navegador-barra" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="images/proyectos/loungegestor-mockup.svg" alt="Boceto del panel de LoungeGestor con plano de sala, reservas y comandas" width="1280" height="800" loading="lazy" decoding="async" />
+                </figure>
+              </div>
+
+              <div class="proyecto-cuerpo">
+                <p class="proyecto-estado proyecto-estado-desarrollo"><span aria-hidden="true"></span>En diseño · Próximamente</p>
+                <h3 id="proyecto-lounge">LoungeGestor · Gestión de locales lounge</h3>
+                <p>Mi próximo proyecto: una herramienta para que un lounge o bar de copas lleve el día a día desde una sola pantalla, pensada para usarse en tablet durante el servicio.</p>
+                <ul class="proyecto-puntos" role="list">
+                  <li>Plano de sala interactivo con el estado de cada mesa</li>
+                  <li>Reservas y control de aforo por turno</li>
+                  <li>Comandas, carta y cobro por mesa</li>
+                  <li>Inventario y estadísticas de ventas</li>
+                </ul>
+                <ul class="habilidad-chips" role="list" aria-label="Tecnologías previstas para LoungeGestor">
+                  <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSockets</li>
+                </ul>
+                <p class="proyecto-nota">El diseño de la imagen es un boceto inicial.</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">

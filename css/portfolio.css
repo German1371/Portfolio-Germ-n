@@ -403,77 +403,65 @@ h2 {
 
 /* -----------------------------------------------------------
    9. Hero
+      Sin tarjeta ni degradados: el protagonismo es la tipografía.
    ----------------------------------------------------------- */
 .hero {
 	position: relative;
-	margin-top: 16px;
-	border-radius: var(--radio-xl);
-	padding: 28px 20px;
-	color: var(--hero-texto);
-	background-color: var(--hero-fondo);
-	overflow: hidden;
-	isolation: isolate;
-	box-shadow: var(--sombra-3);
+	margin-top: 8px;
+	padding: 48px 4px 36px;
+	color: var(--texto);
+	border-bottom: 1px solid var(--borde);
 }
 
 .hero-contenido {
-	position: relative;
-	z-index: 1;
-	max-width: 720px;
+	display: grid;
+	gap: 28px;
 }
 
 .hero-etiqueta {
 	display: inline-flex;
 	align-items: center;
-	gap: 8px;
-	font-size: 0.85rem;
-	padding: 6px 14px;
-	border-radius: 999px;
-	background: var(--hero-etiqueta-fondo);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	margin-bottom: 14px;
+	gap: 10px;
+	font-size: 0.95rem;
+	color: var(--texto-secundario);
 }
 
+/* Punto de estado: verde = disponible. Sin animación. */
 .hero-pulso {
-	width: 8px;
-	height: 8px;
+	width: 9px;
+	height: 9px;
 	border-radius: 50%;
-	background: #4ade80;
-	box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
-	animation: pulso 2s infinite;
-}
-
-@keyframes pulso {
-	0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
-	70%  { box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
-	100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+	background: #16a34a;
+	box-shadow: 0 0 0 3px color-mix(in srgb, #16a34a 22%, transparent);
 }
 
 .hero h1 {
-	font-size: clamp(2rem, 4vw + 0.5rem, 3.5rem);
-	margin-bottom: 14px;
+	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
 	font-weight: 800;
-	letter-spacing: -0.02em;
+	font-size: clamp(3rem, 11vw, 8.5rem);
+	line-height: 0.92;
+	letter-spacing: -0.045em;
+	color: var(--texto);
+	margin: 0;
 }
 
+/* El nombre ya no lleva degradado: mismo color, misma tinta. */
 .hero-resaltado {
-	background: linear-gradient(120deg, var(--hero-acento), #fff);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+	white-space: nowrap;
 }
 
 .hero-subtitulo {
-	font-size: clamp(1rem, 1vw + 0.7rem, 1.2rem);
-	max-width: 55ch;
-	color: rgba(255, 255, 255, 0.9);
+	font-size: clamp(1.1rem, 0.6vw + 1rem, 1.35rem);
+	line-height: 1.55;
+	max-width: 34ch;
+	color: var(--texto-secundario);
 }
 
 .hero-acciones {
-	margin-top: 22px;
 	display: flex;
-	flex-direction: column;
-	gap: 10px;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px 26px;
 }
 
 .boton {
@@ -489,51 +477,83 @@ h2 {
 	min-height: 44px;
 }
 
-.boton-primario {
-	background: #ffffff;
-	color: var(--color-principal-fuerte);
-	box-shadow: var(--sombra-2);
+.hero .boton-primario {
+	background: var(--texto);
+	color: var(--fondo);
+	border-radius: 6px;
+	padding-inline: 24px;
 }
 
-.boton-primario:hover {
-	transform: translateY(-2px);
-	box-shadow: var(--sombra-3);
-}
-
-.boton-secundario {
-	background: transparent;
+.hero .boton-primario:hover {
+	background: var(--color-principal-fuerte);
 	color: #fff;
-	border-color: rgba(255, 255, 255, 0.7);
 }
 
-.boton-secundario:hover {
-	background: rgba(255, 255, 255, 0.1);
-	transform: translateY(-2px);
+html[data-theme="dark"] .hero .boton-primario:hover {
+	color: #0b1220;
 }
 
+/* Secundario como enlace subrayado, no como otro botón */
+.hero .boton-secundario {
+	padding: 0;
+	min-height: 44px;
+	border: 0;
+	border-radius: 0;
+	color: var(--texto);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 6px;
+	text-decoration-color: var(--color-principal);
+	transition: text-underline-offset var(--transicion-rapida), color var(--transicion-rapida);
+}
+
+.hero .boton-secundario:hover {
+	color: var(--color-principal-fuerte);
+	text-underline-offset: 9px;
+}
+
+/* Datos: número grande, etiqueta en minúscula debajo */
 .hero-stats {
-	margin-top: 28px;
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: 12px;
-	border-top: 1px solid rgba(255, 255, 255, 0.15);
-	padding-top: 18px;
+	gap: 0;
+	margin-top: 4px;
+	padding-top: 20px;
+	border-top: 1px solid var(--borde);
 }
 
-.hero-stats div { min-width: 0; }
+.hero-stats div {
+	min-width: 0;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	align-content: start;
+	gap: 4px;
+	padding-inline: 14px;
+	border-left: 1px solid var(--borde);
+}
+
+.hero-stats div:first-child {
+	padding-left: 0;
+	border-left: 0;
+}
+
 .hero-stats dt {
-	font-size: 0.72rem;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	color: rgba(255, 255, 255, 0.7);
-}
-.hero-stats dd {
-	font-size: 1.25rem;
-	font-weight: 800;
-	color: var(--hero-acento);
+	grid-row: 2;
+	font-size: 0.85rem;
+	color: var(--texto-secundario);
+	line-height: 1.3;
 }
 
-/* Blobs decorativos del hero (animados con scroll) */
+.hero-stats dd {
+	grid-row: 1;
+	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
+	font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	color: var(--texto);
+}
+
 .hero-decor { display: none; }
 
 /* -----------------------------------------------------------
@@ -679,64 +699,249 @@ html[data-theme="dark"] .tarjeta-icono {
 	}
 }
 
-/* -----------------------------------------------------------
-   12. Experiencia (timeline)
-   ----------------------------------------------------------- */
-.experiencia-lista {
-	margin-top: 16px;
-	display: flex;
-	flex-direction: column;
-	gap: 14px;
-	position: relative;
-}
-
-.experiencia-elemento {
-	display: grid;
-	gap: 8px;
-	border: 1px solid var(--borde);
-	border-radius: var(--radio-md);
-	padding: 16px;
-	background: var(--superficie-suave);
-	transition: transform var(--transicion-media), box-shadow var(--transicion-media);
-}
-
-.experiencia-elemento:hover {
-	transform: translateX(4px);
-	box-shadow: var(--sombra-2);
-}
-
-.experiencia-cabecera p:first-child {
-	font-weight: 700;
-	color: var(--color-principal-fuerte);
-	font-size: 0.92rem;
-}
-
-.experiencia-cabecera h3 {
-	margin-top: 4px;
-	font-size: 1.15rem;
-}
-
-.experiencia-rol {
-	color: var(--texto-secundario);
-	font-size: 0.92rem;
-	margin-bottom: 6px;
-}
-
-.experiencia-tecnologias {
-	margin-top: 12px;
+/* Chips de tecnologías (habilidades y proyectos) */
+.habilidad-chips {
+	margin-top: 14px;
 	display: flex;
 	gap: 6px;
 	flex-wrap: wrap;
 }
 
-.experiencia-tecnologias li {
-	font-size: 0.8rem;
+.habilidad-chips li {
+	font-size: 0.78rem;
 	border: 1px solid var(--etiqueta-borde);
 	background: var(--etiqueta-fondo);
-	padding: 4px 10px;
+	padding: 3px 10px;
 	border-radius: 999px;
 	color: var(--color-principal-fuerte);
 	font-weight: 600;
+}
+
+.tarjeta-habilidad {
+	display: flex;
+	flex-direction: column;
+}
+
+.tarjeta-habilidad .habilidad-chips {
+	margin-top: auto;
+	padding-top: 14px;
+}
+
+/* -----------------------------------------------------------
+   12. Proyectos (tarjetas con imagen · CONTAINER QUERY)
+   ----------------------------------------------------------- */
+.proyectos-contenedor {
+	container-type: inline-size;
+	container-name: proyectos;
+	margin-top: 18px;
+}
+
+.proyectos-cuadricula {
+	display: grid;
+	gap: 18px;
+	grid-template-columns: 1fr;
+}
+
+.tarjeta-proyecto {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--borde);
+	border-radius: var(--radio-lg);
+	background: var(--superficie-suave);
+	overflow: hidden;
+	transition: transform var(--transicion-media), box-shadow var(--transicion-media), border-color var(--transicion-media);
+}
+
+.tarjeta-proyecto:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--sombra-3);
+	border-color: color-mix(in srgb, var(--color-principal) 40%, var(--borde));
+}
+
+/* Zona de imágenes: navegador + móvil superpuestos */
+.proyecto-media {
+	position: relative;
+	padding: 22px 22px 0;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.proyecto-media-roomly {
+	background: linear-gradient(135deg, #0f6b67 0%, #134e4a 100%);
+}
+
+.proyecto-media-lounge {
+	background: linear-gradient(135deg, #3b1d6e 0%, #150d26 100%);
+}
+
+.proyecto-media figure {
+	margin: 0;
+}
+
+.proyecto-navegador {
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.35);
+	transition: transform var(--transicion-media);
+}
+
+.proyecto-navegador-barra {
+	display: flex;
+	gap: 5px;
+	padding: 7px 10px;
+	background: #e5e7eb;
+}
+
+.proyecto-navegador-barra i {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #f87171;
+}
+.proyecto-navegador-barra i:nth-child(2) { background: #fbbf24; }
+.proyecto-navegador-barra i:nth-child(3) { background: #34d399; }
+
+.proyecto-navegador img {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+	object-position: top left;
+}
+
+.proyecto-movil {
+	position: absolute;
+	right: 18px;
+	bottom: -40px;
+	width: 26%;
+	padding: 5px;
+	border-radius: 20px;
+	background: #111;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+	transition: transform var(--transicion-media);
+}
+
+.proyecto-movil img {
+	width: 100%;
+	aspect-ratio: 9 / 16;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 15px;
+}
+
+.tarjeta-proyecto:hover .proyecto-navegador { transform: translateY(-4px); }
+.tarjeta-proyecto:hover .proyecto-movil { transform: translateY(-10px) rotate(-2deg); }
+
+/* Texto de la tarjeta */
+.proyecto-cuerpo {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.proyecto-estado {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.8rem;
+	font-weight: 700;
+	color: var(--texto-secundario);
+	margin-bottom: 8px;
+}
+
+.proyecto-estado span {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #22c55e;
+}
+
+.proyecto-estado-desarrollo span {
+	background: var(--color-acento);
+}
+
+.proyecto-cuerpo h3 {
+	font-size: 1.25rem;
+	margin-bottom: 8px;
+}
+
+.proyecto-cuerpo > p:not(.proyecto-estado) {
+	color: var(--texto-secundario);
+}
+
+.proyecto-puntos {
+	margin-top: 12px;
+	display: grid;
+	gap: 6px;
+	font-size: 0.92rem;
+}
+
+.proyecto-puntos li {
+	position: relative;
+	padding-left: 20px;
+}
+
+.proyecto-puntos li::before {
+	content: "";
+	position: absolute;
+	left: 4px;
+	top: 0.6em;
+	width: 7px;
+	height: 7px;
+	border-radius: 2px;
+	background: var(--color-principal);
+	transform: rotate(45deg);
+}
+
+.proyecto-acciones {
+	margin-top: auto;
+	padding-top: 18px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.boton-proyecto {
+	background: var(--color-principal);
+	color: #fff;
+}
+
+html[data-theme="dark"] .boton-proyecto {
+	color: #0b1220;
+}
+
+.boton-proyecto:hover {
+	background: var(--color-principal-fuerte);
+	transform: translateY(-2px);
+	box-shadow: var(--sombra-2);
+}
+
+.boton-proyecto-sec {
+	border-color: var(--borde);
+	color: var(--texto);
+	background: var(--superficie);
+}
+
+.boton-proyecto-sec:hover {
+	border-color: var(--color-principal);
+	transform: translateY(-2px);
+}
+
+.proyecto-nota {
+	margin-top: auto;
+	padding-top: 18px;
+	font-size: 0.82rem;
+	font-style: italic;
+	color: var(--texto-tenue) !important;
+}
+
+@container proyectos (inline-size >= 860px) {
+	.proyectos-cuadricula {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 22px;
+	}
 }
 
 /* -----------------------------------------------------------
@@ -900,7 +1105,7 @@ textarea {
    ----------------------------------------------------------- */
 @supports (animation-timeline: view()) {
 	.seccion,
-	.experiencia-elemento,
+	.tarjeta-proyecto,
 	.tarjeta-habilidad {
 		animation: aparecer-en-vista linear both;
 		animation-timeline: view();
@@ -933,11 +1138,7 @@ textarea {
 		margin-top: 24px;
 	}
 	.hero {
-		padding: 40px 32px;
-	}
-	.hero-acciones {
-		flex-direction: row;
-		flex-wrap: wrap;
+		padding: 64px 4px 44px;
 	}
 	.sobre-mi-cuadricula {
 		grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
@@ -978,14 +1179,32 @@ textarea {
 		gap: 24px;
 	}
 	.hero {
-		padding: 56px 44px;
+		padding: 88px 4px 56px;
+	}
+	/* Composición asimétrica: titular a todo ancho, datos a la derecha */
+	.hero-contenido {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+		grid-template-areas:
+			"etiqueta etiqueta"
+			"titulo   titulo"
+			"sub      stats"
+			"acciones stats";
+		column-gap: 64px;
+		row-gap: 32px;
+	}
+	.hero-etiqueta   { grid-area: etiqueta; }
+	.hero h1         { grid-area: titulo; }
+	.hero-subtitulo  { grid-area: sub; }
+	.hero-acciones   { grid-area: acciones; }
+	.hero-stats {
+		grid-area: stats;
+		align-self: end;
 	}
 }
 
 /* Pantallas muy anchas */
 @media (width >= 1200px) {
 	main { padding-inline: 8px; }
-	.hero h1 { font-size: clamp(2.5rem, 3vw + 1rem, 4rem); }
 }
 
 /* -----------------------------------------------------------

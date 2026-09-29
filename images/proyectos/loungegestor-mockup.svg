@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1030"/>
+      <stop offset="1" stop-color="#0e0a1a"/>
+    </linearGradient>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5b94a"/>
+      <stop offset="1" stop-color="#e0703a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.1" r="0.7">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <rect width="1280" height="800" fill="url(#glow)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="220" height="800" fill="#150d26"/>
+  <rect x="28" y="30" width="36" height="36" rx="10" fill="url(#oro)"/>
+  <text x="76" y="55" fill="#f4ecff" font-size="20" font-weight="700">Lounge<tspan fill="#f5b94a">Gestor</tspan></text>
+  <g font-size="15" fill="#b9a8d6">
+    <rect x="16" y="104" width="188" height="42" rx="10" fill="#2a1a47"/>
+    <circle cx="40" cy="125" r="6" fill="#f5b94a"/><text x="58" y="130" fill="#f4ecff" font-weight="600">Sala y mesas</text>
+    <circle cx="40" cy="177" r="6" fill="#5b4a7d"/><text x="58" y="182">Reservas</text>
+    <circle cx="40" cy="229" r="6" fill="#5b4a7d"/><text x="58" y="234">Comandas</text>
+    <circle cx="40" cy="281" r="6" fill="#5b4a7d"/><text x="58" y="286">Carta</text>
+    <circle cx="40" cy="333" r="6" fill="#5b4a7d"/><text x="58" y="338">Inventario</text>
+    <circle cx="40" cy="385" r="6" fill="#5b4a7d"/><text x="58" y="390">Caja y ventas</text>
+    <circle cx="40" cy="437" r="6" fill="#5b4a7d"/><text x="58" y="442">Personal</text>
+  </g>
+
+  <!-- Cabecera -->
+  <text x="260" y="62" fill="#f4ecff" font-size="28" font-weight="700">Sala principal</text>
+  <text x="260" y="88" fill="#9c8cbb" font-size="15">Viernes · turno de noche</text>
+  <rect x="1064" y="36" width="180" height="44" rx="22" fill="url(#oro)"/>
+  <text x="1154" y="64" fill="#1b1030" font-size="15" font-weight="700" text-anchor="middle">+ Nueva reserva</text>
+
+  <!-- KPIs -->
+  <g>
+    <rect x="260" y="116" width="230" height="96" rx="16" fill="#21163a" stroke="#34255a"/>
+    <text x="282" y="148" fill="#9c8cbb" font-size="13">MESAS OCUPADAS</text>
+    <text x="282" y="190" fill="#f4ecff" font-size="34" font-weight="700">14<tspan fill="#9c8cbb" font-size="20"> / 20</tspan></text>
+
+    <rect x="510" y="116" width="230" height="96" rx="16" fill="#21163a" stroke="#34255a"/>
+    <text x="532" y="148" fill="#9c8cbb" font-size="13">RESERVAS HOY</text>
+    <text x="532" y="190" fill="#f4ecff" font-size="34" font-weight="700">27</text>
+
+    <rect x="760" y="116" width="230" height="96" rx="16" fill="#21163a" stroke="#34255a"/>
+    <text x="782" y="148" fill="#9c8cbb" font-size="13">COMANDAS ABIERTAS</text>
+    <text x="782" y="190" fill="#f4ecff" font-size="34" font-weight="700">9</text>
+
+    <rect x="1010" y="116" width="234" height="96" rx="16" fill="#21163a" stroke="#34255a"/>
+    <text x="1032" y="148" fill="#9c8cbb" font-size="13">CAJA DEL TURNO</text>
+    <text x="1032" y="190" fill="#f5b94a" font-size="34" font-weight="700">1.842 €</text>
+  </g>
+
+  <!-- Plano de sala -->
+  <rect x="260" y="236" width="640" height="530" rx="20" fill="#1a1130" stroke="#34255a"/>
+  <text x="284" y="272" fill="#f4ecff" font-size="17" font-weight="600">Plano de sala</text>
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <!-- fila 1: reservados -->
+    <rect x="292" y="300" width="170" height="96" rx="18" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/>
+    <text x="377" y="344" fill="#f4ecff">VIP 1</text><text x="377" y="366" fill="#f5b94a" font-size="12" font-weight="500">Ocupada · 6 pax</text>
+    <rect x="490" y="300" width="170" height="96" rx="18" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/>
+    <text x="575" y="344" fill="#f4ecff">VIP 2</text><text x="575" y="366" fill="#f5b94a" font-size="12" font-weight="500">Ocupada · 4 pax</text>
+    <rect x="688" y="300" width="180" height="96" rx="18" fill="#1e2f2a" stroke="#34d399" stroke-width="2"/>
+    <text x="778" y="344" fill="#f4ecff">VIP 3</text><text x="778" y="366" fill="#34d399" font-size="12" font-weight="500">Libre</text>
+
+    <!-- mesas redondas -->
+    <circle cx="340" cy="470" r="38" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/><text x="340" y="475" fill="#f4ecff">M1</text>
+    <circle cx="450" cy="470" r="38" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/><text x="450" y="475" fill="#f4ecff">M2</text>
+    <circle cx="560" cy="470" r="38" fill="#3a2a1a" stroke="#fb923c" stroke-width="2"/><text x="560" y="475" fill="#f4ecff">M3</text>
+    <circle cx="670" cy="470" r="38" fill="#1e2f2a" stroke="#34d399" stroke-width="2"/><text x="670" y="475" fill="#f4ecff">M4</text>
+    <circle cx="780" cy="470" r="38" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/><text x="780" y="475" fill="#f4ecff">M5</text>
+
+    <circle cx="340" cy="590" r="38" fill="#1e2f2a" stroke="#34d399" stroke-width="2"/><text x="340" y="595" fill="#f4ecff">M6</text>
+    <circle cx="450" cy="590" r="38" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/><text x="450" y="595" fill="#f4ecff">M7</text>
+    <circle cx="560" cy="590" r="38" fill="#3b2566" stroke="#f5b94a" stroke-width="2"/><text x="560" y="595" fill="#f4ecff">M8</text>
+    <circle cx="670" cy="590" r="38" fill="#3a2a1a" stroke="#fb923c" stroke-width="2"/><text x="670" y="595" fill="#f4ecff">M9</text>
+    <circle cx="780" cy="590" r="38" fill="#1e2f2a" stroke="#34d399" stroke-width="2"/><text x="780" y="595" fill="#f4ecff">M10</text>
+
+    <!-- barra -->
+    <rect x="292" y="668" width="576" height="64" rx="16" fill="#241840" stroke="#5b4a7d" stroke-dasharray="6 6"/>
+    <text x="580" y="706" fill="#9c8cbb" font-weight="600">BARRA</text>
+  </g>
+  <g font-size="12" fill="#b9a8d6">
+    <circle cx="618" cy="268" r="6" fill="#f5b94a"/><text x="630" y="272">Ocupada</text>
+    <circle cx="712" cy="268" r="6" fill="#fb923c"/><text x="724" y="272">Reservada</text>
+    <circle cx="812" cy="268" r="6" fill="#34d399"/><text x="824" y="272">Libre</text>
+  </g>
+
+  <!-- Panel de comandas -->
+  <rect x="924" y="236" width="320" height="530" rx="20" fill="#1a1130" stroke="#34255a"/>
+  <text x="948" y="272" fill="#f4ecff" font-size="17" font-weight="600">Comandas en curso</text>
+  <g font-size="14">
+    <rect x="944" y="296" width="280" height="88" rx="14" fill="#21163a"/>
+    <text x="962" y="324" fill="#f4ecff" font-weight="700">VIP 1</text><text x="1206" y="324" fill="#f5b94a" text-anchor="end" font-weight="700">86,50 €</text>
+    <text x="962" y="348" fill="#9c8cbb">2× Botella premium</text>
+    <text x="962" y="370" fill="#9c8cbb">4× Cóctel de la casa</text>
+
+    <rect x="944" y="398" width="280" height="88" rx="14" fill="#21163a"/>
+    <text x="962" y="426" fill="#f4ecff" font-weight="700">Mesa 2</text><text x="1206" y="426" fill="#f5b94a" text-anchor="end" font-weight="700">32,00 €</text>
+    <text x="962" y="450" fill="#9c8cbb">1× Gin tonic</text>
+    <text x="962" y="472" fill="#9c8cbb">2× Refresco</text>
+
+    <rect x="944" y="500" width="280" height="88" rx="14" fill="#21163a"/>
+    <text x="962" y="528" fill="#f4ecff" font-weight="700">Mesa 7</text><text x="1206" y="528" fill="#f5b94a" text-anchor="end" font-weight="700">45,00 €</text>
+    <text x="962" y="552" fill="#9c8cbb">3× Cóctel de temporada</text>
+    <text x="962" y="574" fill="#9c8cbb">1× Tabla para compartir</text>
+  </g>
+  <rect x="944" y="700" width="280" height="46" rx="23" fill="url(#oro)"/>
+  <text x="1084" y="729" fill="#1b1030" font-size="15" font-weight="700" text-anchor="middle">Cobrar mesa</text>
+</svg>
