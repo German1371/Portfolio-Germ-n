@@ -84,8 +84,6 @@ ol {
 	--etiqueta-fondo: #eef4fb;
 	--etiqueta-borde: #c9d8e8;
 
-	--campo-fondo: #ffffff;
-	--campo-borde: #cad5e1;
 
 	--boton-tema-fondo: #ffffff;
 	--boton-tema-texto: #1f2937;
@@ -127,8 +125,6 @@ html[data-theme="dark"] {
 
 	--etiqueta-fondo: #1a2740;
 	--etiqueta-borde: #31435d;
-	--campo-fondo: #101c2e;
-	--campo-borde: #31435d;
 	--boton-tema-fondo: #16263d;
 	--boton-tema-texto: #e5eef9;
 	--boton-tema-borde: #31435d;
@@ -360,7 +356,8 @@ main {
 }
 
 .seccion,
-.hero {
+.hero,
+.contacto {
 	scroll-snap-align: start;
 	scroll-snap-stop: normal;
 }
@@ -477,19 +474,22 @@ h2 {
 	min-height: 44px;
 }
 
-.hero .boton-primario {
+.hero .boton-primario,
+.contacto .boton-primario {
 	background: var(--texto);
 	color: var(--fondo);
 	border-radius: 6px;
 	padding-inline: 24px;
 }
 
-.hero .boton-primario:hover {
+.hero .boton-primario:hover,
+.contacto .boton-primario:hover {
 	background: var(--color-principal-fuerte);
 	color: #fff;
 }
 
-html[data-theme="dark"] .hero .boton-primario:hover {
+html[data-theme="dark"] .hero .boton-primario:hover,
+html[data-theme="dark"] .contacto .boton-primario:hover {
 	color: #0b1220;
 }
 
@@ -513,7 +513,8 @@ html[data-theme="dark"] .hero .boton-primario:hover {
 }
 
 /* Datos: número grande, etiqueta en minúscula debajo */
-.hero-stats {
+.hero-stats,
+.contacto-datos {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 0;
@@ -522,7 +523,8 @@ html[data-theme="dark"] .hero .boton-primario:hover {
 	border-top: 1px solid var(--borde);
 }
 
-.hero-stats div {
+.hero-stats div,
+.contacto-datos div {
 	min-width: 0;
 	display: grid;
 	grid-template-rows: auto 1fr;
@@ -532,19 +534,22 @@ html[data-theme="dark"] .hero .boton-primario:hover {
 	border-left: 1px solid var(--borde);
 }
 
-.hero-stats div:first-child {
+.hero-stats div:first-child,
+.contacto-datos div:first-child {
 	padding-left: 0;
 	border-left: 0;
 }
 
-.hero-stats dt {
+.hero-stats dt,
+.contacto-datos dt {
 	grid-row: 2;
 	font-size: 0.85rem;
 	color: var(--texto-secundario);
 	line-height: 1.3;
 }
 
-.hero-stats dd {
+.hero-stats dd,
+.contacto-datos dd {
 	grid-row: 1;
 	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
 	font-size: clamp(1.5rem, 1.2vw + 1rem, 2rem);
@@ -946,127 +951,170 @@ html[data-theme="dark"] .boton-proyecto {
 
 /* -----------------------------------------------------------
    13. Contacto
+       Mismo lenguaje que el hero: sin tarjeta, tipografía grande
+       y los canales como una lista editorial. Sin formulario.
    ----------------------------------------------------------- */
+.contacto {
+	margin-top: 32px;
+	padding: 56px 4px 40px;
+	border-top: 1px solid var(--borde);
+	color: var(--texto);
+}
+
 .contacto-contenido {
 	display: grid;
-	gap: 18px;
-	margin-top: 6px;
-	grid-template-columns: 1fr;
+	gap: 28px;
 }
 
-.contacto-info p {
-	color: var(--texto-secundario);
-}
-
-.contacto-enlaces {
-	margin-top: 14px;
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	font-style: normal;
-}
-
-.contacto-enlace {
+.contacto-etiqueta {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
-	padding: 10px 14px;
-	border: 1px solid var(--borde);
-	background: var(--superficie-suave);
-	border-radius: var(--radio-sm);
-	color: var(--texto);
-	font-weight: 600;
-	transition: transform var(--transicion-rapida), border-color var(--transicion-rapida), background-color var(--transicion-rapida);
-}
-
-.contacto-enlace:hover {
-	transform: translateX(4px);
-	border-color: var(--color-principal);
-	background: var(--etiqueta-fondo);
-}
-
-.contacto-icono {
-	display: inline-grid;
-	place-items: center;
-	width: 28px;
-	height: 28px;
-	border-radius: 8px;
-	background: linear-gradient(135deg, var(--color-principal), var(--color-principal-fuerte));
-	color: #fff;
-	font-size: 0.75rem;
-	font-weight: 700;
-}
-
-.contacto-formulario {
-	border: 1px solid var(--borde);
-	border-radius: var(--radio-md);
-	padding: 18px;
-	background: var(--superficie-suave);
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-.fila-formulario {
-	display: flex;
-	gap: 12px;
-	flex-direction: column;
-}
-
-.campo-formulario {
-	display: flex;
-	flex-direction: column;
-	gap: 6px;
-	flex: 1 1 100%;
-}
-
-label {
-	font-weight: 600;
+	font-size: 0.95rem;
 	color: var(--texto-secundario);
-	font-size: 0.92rem;
 }
 
-input,
-textarea {
-	width: 100%;
-	border: 1px solid var(--campo-borde);
-	border-radius: var(--radio-sm);
-	padding: 12px 14px;
-	font: inherit;
-	background: var(--campo-fondo);
-	color: var(--texto);
-	transition: border-color var(--transicion-rapida), box-shadow var(--transicion-rapida);
+.contacto h2 {
+	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
+	font-weight: 800;
+	font-size: clamp(2.75rem, 9vw, 7rem);
+	line-height: 0.92;
+	letter-spacing: -0.045em;
+	margin: 0;
 }
 
-input:focus,
-textarea:focus {
-	outline: none;
-	border-color: var(--color-principal);
-	box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-principal) 25%, transparent);
+.contacto-subtitulo {
+	font-size: clamp(1.05rem, 0.5vw + 0.95rem, 1.25rem);
+	line-height: 1.55;
+	max-width: 42ch;
+	color: var(--texto-secundario);
 }
 
-textarea {
-	resize: vertical;
-	min-height: 130px;
+/* Email: el canal principal, escrito en grande */
+.contacto-email {
+	display: grid;
+	gap: 18px;
 }
 
-.contacto-formulario .boton {
-	margin-top: 6px;
-	background: var(--color-principal);
-	color: #fff;
-	width: 100%;
+.contacto-email-enlace {
+	width: fit-content;
+	max-width: 100%;
+	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
+	font-weight: 700;
+	font-size: clamp(1.35rem, 3.6vw + 0.4rem, 2.6rem);
+	letter-spacing: -0.03em;
+	line-height: 1.15;
+	overflow-wrap: anywhere;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 8px;
+	text-decoration-color: var(--color-principal);
+	transition: text-underline-offset var(--transicion-rapida), color var(--transicion-rapida);
 }
 
-.contacto-formulario .boton:hover {
-	background: var(--color-principal-fuerte);
-	transform: translateY(-1px);
-	box-shadow: var(--sombra-2);
-}
-
-.formulario-aviso {
-	min-height: 1.2em;
-	font-size: 0.9rem;
+.contacto-email-enlace:hover {
 	color: var(--color-principal-fuerte);
+	text-underline-offset: 11px;
+}
+
+.contacto-email-acciones {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px 14px;
+}
+
+.boton-copiar {
+	display: inline-flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 12px 20px;
+	border: 1px solid var(--borde);
+	border-radius: 6px;
+	background: transparent;
+	color: var(--texto);
+	font-weight: 700;
+	transition: border-color var(--transicion-rapida), color var(--transicion-rapida);
+}
+
+.boton-copiar:hover {
+	border-color: var(--color-principal);
+	color: var(--color-principal-fuerte);
+}
+
+.boton-copiar.es-copiado {
+	border-color: #16a34a;
+	color: #15803d;
+}
+
+html[data-theme="dark"] .boton-copiar.es-copiado {
+	color: #4ade80;
+}
+
+.contacto-aviso {
+	flex-basis: 100%;
+	min-height: 1.3em;
+	font-size: 0.88rem;
+	color: var(--texto-secundario);
+}
+
+/* Otros canales: filas separadas por líneas, como un índice */
+.contacto-canales {
+	border-top: 1px solid var(--borde);
+}
+
+.contacto-canales li {
+	border-bottom: 1px solid var(--borde);
+}
+
+.contacto-canal {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 16px;
+	padding: 18px 4px;
+}
+
+.contacto-canal-icono {
+	width: 22px;
+	height: 22px;
+	color: var(--texto-secundario);
+	transition: color var(--transicion-rapida);
+}
+
+.contacto-canal-texto {
+	display: grid;
+	gap: 2px;
+}
+
+.contacto-canal-nombre {
+	font-family: "Schibsted Grotesk", "Segoe UI", sans-serif;
+	font-weight: 700;
+	font-size: clamp(1.25rem, 1.2vw + 1rem, 1.75rem);
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+	transition: color var(--transicion-rapida);
+}
+
+.contacto-canal-detalle {
+	font-size: 0.9rem;
+	color: var(--texto-secundario);
+}
+
+.contacto-canal-flecha {
+	font-size: 1.4rem;
+	color: var(--texto-secundario);
+	transition: transform var(--transicion-rapida), color var(--transicion-rapida);
+}
+
+.contacto-canal:hover .contacto-canal-nombre,
+.contacto-canal:hover .contacto-canal-icono,
+.contacto-canal:hover .contacto-canal-flecha {
+	color: var(--color-principal-fuerte);
+}
+
+.contacto-canal:hover .contacto-canal-flecha {
+	transform: translate(4px, -4px);
 }
 
 /* -----------------------------------------------------------
@@ -1145,13 +1193,8 @@ textarea {
 		gap: 28px;
 		align-items: center;
 	}
-	.fila-formulario {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-	.contacto-formulario .boton {
-		width: auto;
-		align-self: flex-start;
+	.contacto {
+		padding: 72px 4px 48px;
 	}
 }
 
@@ -1174,10 +1217,6 @@ textarea {
 	.boton-tema-texto {
 		display: inline;
 	}
-	.contacto-contenido {
-		grid-template-columns: 1fr 1.15fr;
-		gap: 24px;
-	}
 	.hero {
 		padding: 88px 4px 56px;
 	}
@@ -1198,6 +1237,31 @@ textarea {
 	.hero-acciones   { grid-area: acciones; }
 	.hero-stats {
 		grid-area: stats;
+		align-self: end;
+	}
+
+	/* Contacto: misma composición asimétrica que el hero */
+	.contacto {
+		padding: 96px 4px 64px;
+	}
+	.contacto-contenido {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+		grid-template-areas:
+			"etiqueta etiqueta"
+			"titulo   titulo"
+			"sub      canales"
+			"email    canales"
+			"email    datos";
+		column-gap: 64px;
+		row-gap: 32px;
+	}
+	.contacto-etiqueta  { grid-area: etiqueta; }
+	.contacto h2        { grid-area: titulo; }
+	.contacto-subtitulo { grid-area: sub; }
+	.contacto-email     { grid-area: email; align-self: start; }
+	.contacto-canales   { grid-area: canales; align-self: start; }
+	.contacto-datos {
+		grid-area: datos;
 		align-self: end;
 	}
 }
@@ -1231,7 +1295,8 @@ textarea {
 		display: none !important;
 	}
 	body { background: #fff; color: #000; }
-	.seccion, .hero {
+	.boton-copiar { display: none !important; }
+	.seccion, .hero, .contacto {
 		box-shadow: none;
 		border: 1px solid #ccc;
 		break-inside: avoid;
